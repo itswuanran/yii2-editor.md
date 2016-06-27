@@ -1,6 +1,6 @@
 <?php
 
-namespace anruence\EditorMdAssert;
+namespace anruence\editormd;
 use yii\web\AssetBundle;
 
 class EditorMdAssert extends AssetBundle

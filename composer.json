@@ -1,0 +1,41 @@
+{
+  "name": "anruence/yii2-editor.md",
+  "description": "Editor.md widget for Yii2.",
+  "type": "yii2-extension",
+  "keywords": [
+    "yii",
+    "yii2",
+    "extension",
+    "widget",
+    "editor.md"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "anruence",
+      "email": "wuanran@hlj.xyz",
+      "homepage": "http://honglingjinclub.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/anruence/yii2-editor.md/issues",
+    "source": "https://github.com/anruence/yii2-editor.md"
+  },
+  "require": {
+    "bower-asset/editor.md": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "anruence\\editormd\\": "src"
+    }
+  },
+  "extra": {
+    "asset-installer-paths": {
+      "bower-asset-library": "vendor/bower"
+    }
+  }
+}

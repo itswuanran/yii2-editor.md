@@ -16,7 +16,7 @@ use anruence\editormd\EditorMd;
             'id' => 'test-editormd',
             'clientOptions' => [
                 'name' => 'Blog[content]',
-                'value' => $model ? $model->content : '',
+                'value' => $model->isNewRecord() ? $model->content : '',
                 'height' => '640',
                 'imageUpload' => true,
                 'imageFormats' => ["jpg", "jpeg", "gif", "png", "bmp", "webp"],

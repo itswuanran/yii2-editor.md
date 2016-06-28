@@ -2,19 +2,21 @@
 
 namespace anruence\editormd;
 
-use yii\base\Widget;
 use yii\helpers\Html;
+use yii\helpers\Json;
+use yii\jui\InputWidget;
 
-class EditorMd extends Widget
+class EditorMd extends InputWidget
 {
     /**
      * @var array the HTML attributes for the widget container tag.
      */
     public $options = [];
 
-    public $data = [];
-
-    public $type;
+    /**
+     * editor options
+     */
+    public $clientOptions = [];
 
     /**
      * Initializes the widget.
@@ -38,17 +40,14 @@ class EditorMd extends Widget
         $this->registerClientScript();
     }
 
-    /**
-     * Registers the required js files and script to initialize ChartJS plugin
-     */
     protected function registerClientScript()
     {
         $id = $this->options['id'];
         $view = $this->getView();
-        EditorMdAssert::register($view);
-        $js = ';var editor = editormd("' . $id . '", {
-            path : "../lib/"  
-        });';
+        $editormd = EditorMdAsset::register($view);
+        $this->clientOptions['path'] = $editormd->baseUrl . '/lib/';
+        $options = Json::encode($this->clientOptions);
+        $js = 'var editor = editormd("' . $id . '", ' . $options . ');';
         $view->registerJs($js);
     }
 }

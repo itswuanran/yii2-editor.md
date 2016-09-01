@@ -13,9 +13,7 @@ use anruence\editormd\EditorMd;
 ?>
 <?= $form->field($model, 'content')->widget(EditorMd::className(), [
         'id' => 'editormd',
-        'clientOptions' => [
-            'name' => 'Blog[content]',
-            'value' => $model->isNewRecord ? '' : $model->content,
+        'options' => [
             'height' => '640',
 //                'previewTheme' => 'dark',
 //                'editorTheme' => 'pastel-on-dark',

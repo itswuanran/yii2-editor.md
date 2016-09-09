@@ -50,7 +50,7 @@ class EditorMd extends InputWidget
         $view = $this->getView();
         $editormd = EditorMdAsset::register($view);
         $id = $this->options['id'];
-        $this->options['value'] = $this->value;
+        $this->options['value'] = $this->value ? $this->value : '';
         $this->options['name'] = $this->name;
         $this->options['path'] = $editormd->baseUrl . '/lib/';
         $options = Json::encode($this->options);

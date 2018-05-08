@@ -3,9 +3,7 @@
   "description": "Editor.md widget for Yii2.",
   "type": "yii2-extension",
   "keywords": [
-    "yii",
     "yii2",
-    "extension",
     "widget",
     "editor.md"
   ],
@@ -13,8 +11,8 @@
   "authors": [
     {
       "name": "anruence",
-      "email": "wuanran@hlj.xyz",
-      "homepage": "http://honglingjinclub.com",
+      "email": "anruence@gmail.com",
+      "homepage": "http://anruence.com",
       "role": "Developer"
     }
   ],
